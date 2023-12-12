@@ -1,14 +1,10 @@
 import {React, useEffect, useState} from "react";import Markdown from 'markdown-to-jsx'
-import hljs from 'highlight.js/lib/core'
-import 'highlight.js/styles/github.css'
 import javascript from 'highlight.js/lib/languages/javascript';
 import glsl from 'highlight.js/lib/languages/glsl';
 
 
 const FxArticle = (props) => {
-    //highlightDisabled turns off highlight.js code highlighting
-    //in case you wanted to do your own code styling
-    let {highlightDisabled, slug} = props
+    let {slug} = props
     const [article, setArticle] = useState({
         title:'',
         description:'',
@@ -53,12 +49,6 @@ const FxArticle = (props) => {
                     body: articleData.body.replaceAll("ipfs://", "https://gateway.fxhash2.xyz/ipfs/")
                     .replaceAll('&#x20;', ' '),
                 })
-                //code block language registration
-                if(!highlightDisabled) {
-                    hljs.registerLanguage('javascript', javascript);
-                    hljs.registerLanguage('glsl', glsl);
-                    hljs.highlightAll()
-                }
             } else if(typeof articleData == 'string') {
                 console.log('fx(hash) endpoint returned a string')
             } else if(articleData == null) {

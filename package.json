@@ -1,6 +1,6 @@
 {
   "name": "fxtext-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A React component which retrieves an article from the fx(hash) API and converts Markdown to JSX",
   "main": "Article.jsx",
   "scripts": {
