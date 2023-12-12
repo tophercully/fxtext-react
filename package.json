@@ -1,0 +1,23 @@
+{
+  "name": "react-fxtext",
+  "version": "1.0.0",
+  "description": "A React component which retrieves an article from the fx(hash) API and converts Markdown to JSX",
+  "main": "Article.jsx",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "react",
+    "fxtext",
+    "article",
+    "blog",
+    "fxhash",
+    "api",
+    "graphql",
+    "markdown",
+    "highlight",
+    "jsx"
+  ],
+  "author": "Chris McCully",
+  "license": "MIT"
+}
