@@ -1,9 +1,9 @@
-# react-fxtext
+# fxtext-react
 A React component that retrieves an article from the fx(hash) API and converts Markdown to JSX
 
 From your CLI:
 ```
-npm install react-fxtext
+npm install fxtext-react
 ```
 
 Usage:
@@ -11,7 +11,7 @@ Usage:
 ```js
 //App.jsx
 ...
-import Article from 'react-fxtext'
+import FxArticle from 'fxtext-react'
 
 export default function() {
   //this will retrieve the article available at fxhash.xyz/article/example 
@@ -19,7 +19,7 @@ export default function() {
 
   return (
     <div>
-      <Article slug='{slug}' />
+      <FxArticle slug='{slug}' />
     </div>
   )
   ...
