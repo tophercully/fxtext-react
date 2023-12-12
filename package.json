@@ -18,6 +18,14 @@
     "highlight",
     "jsx"
   ],
+  "peerDependencies": {      
+    "react": ">=10.2.1",
+    "react-dom": ">=10.2.1"
+},
+ "devDependencies": {      
+    "react": ">=10.2.1",      
+    "react-dom": ">=10.2.1"  
+},  
   "author": "Chris McCully",
   "license": "MIT"
 }
