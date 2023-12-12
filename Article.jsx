@@ -1,15 +1,14 @@
-import {React, useEffect, useState} from "react";
-import Markdown from 'markdown-to-jsx'
+import {React, useEffect, useState} from "react";import Markdown from 'markdown-to-jsx'
 import hljs from 'highlight.js/lib/core'
 import 'highlight.js/styles/github.css'
 import javascript from 'highlight.js/lib/languages/javascript';
 import glsl from 'highlight.js/lib/languages/glsl';
 
 
-const Article = (props) => {
+const FxArticle = (props) => {
     //highlightDisabled turns off highlight.js code highlighting
     //in case you wanted to do your own code styling
-    let {highlightDisabled} = props
+    let {highlightDisabled, slug} = props
     const [article, setArticle] = useState({
         title:'',
         description:'',
@@ -17,7 +16,7 @@ const Article = (props) => {
     })
     //our slug variable to feed the request
     //you can edit this component to pass any variable into the graphql request
-    const slug = props.slug
+    // const slug = props.slug
     useEffect(() => {
         //request article by slug
         const grabArticle = async() => {
@@ -74,13 +73,13 @@ const Article = (props) => {
     }, []);
 
     return(        
-        <div className="article-container">
-            <h1>{article.title}</h1>
-            <h3>{article.description}</h3>
+        <div className="fx-article">
+            <h1 className="fx-article-title">{article.title}</h1>
+            <h3 className="fx-article-desc">{article.description}</h3>
             <br></br>
-            <Markdown className='article'>{article.body}</Markdown>
+            <Markdown className='fx-article-body'>{article.body}</Markdown>
         </div>
     )
 }
 
-export default Article
+export default FxArticle
