@@ -1,7 +1,5 @@
-import {React, useEffect, useState} from "react";import Markdown from 'markdown-to-jsx'
-import javascript from 'highlight.js/lib/languages/javascript';
-import glsl from 'highlight.js/lib/languages/glsl';
-
+import {React, useEffect, useState} from "react";
+import Markdown from 'markdown-to-jsx'
 
 const FxArticle = (props) => {
     let {slug} = props
